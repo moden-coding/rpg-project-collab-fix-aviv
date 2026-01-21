@@ -105,7 +105,19 @@ public class Script {
      * @return true if the two scripts match, false otherwise
      */
     public boolean matches(Script other) {
-    	return false;
+        if(x!=other.x&&x!=-1&&other.x!=-1){
+            return false;
+        }
+        else if(y!=other.y&&y!=-1&&other.y!=-1){
+            return false;
+        }
+       else if(action!=null&&other.action!=null&&!action.equals(other.action)) {
+        return false;
+       } else if(argument!=null&&other.argument!=null&&!argument.equals(other.argument)){
+        return false;
+       }else{
+    	return true;
+       }
     }
     
 /* * * * * Extension for part 1 * * * * */
